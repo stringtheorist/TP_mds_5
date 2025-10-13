@@ -13,11 +13,11 @@ Note=440;       % Frequence fondamentale [Hz]
 C=2*L*Note;     % Celerite [m/s]
 N0=ro*A*C^2;    % Tension [N]
 Def=N0/(E*A);   % Deformation [~]
-% Excitation: corde pincee d'une hauteur H en s=el 
+% Excitation: corde pincee d'une hauteur H en s=el
 H=L/5;          % Hauteur [m]
 el=L/4;         % poistion [m]
 % Domaine modal
-nmax=10;        % Nombre maximal de mode considere      
+nmax=10;        % Nombre maximal de mode considere
 n=(1:nmax)';    % Indices modaux
 Nw=nmax;
 kn=n*pi/L;      % Nombres d'ondes [1/m] : corde fixee aux deux extremites
@@ -35,7 +35,7 @@ tmax=max(Per)*2;% Temps maximum de la simulation [s]
 t=0:dt:tmax;    % Echantillonage temporel [s]
 Nt=length(t);   % Nombre de points d'echantillonages en temps
 % %% ========================================================================
-%Rq% Dans une phase de bebeugage, il faut que [Nt,Ns,Nw] aient des valeurs 
+%Rq% Dans une phase de bebeugage, il faut que [Nt,Ns,Nw] aient des valeurs
 % raisonnables (<=1000) et si possible distinctes.
 disp(['[Nt,Ns,Nw]=[' num2str([Nt,Ns,Nw]) ']'])
 
@@ -44,7 +44,7 @@ disp(['[Nt,Ns,Nw]=[' num2str([Nt,Ns,Nw]) ']'])
 % Modes propres
 for in=1:Nw
     % Y_ij, avec i=>n et j=>s
-    Y(in,:)=sin(kn(in)*s); 
+    Y(in,:)=sin(kn(in)*s);
 end
 %=> visualisation de quelques modes propres
 figure(1);
@@ -66,7 +66,7 @@ set(gca,'FontSize',24)
 % Fonction en temps
 for in=1:nmax
     % T_ij, avec i=>n et j=>t
-    T(in,:)=an(in)*cos(wn(in)*t)+bn(in)*sin(wn(in)*t)/wn(in); 
+    T(in,:)=an(in)*cos(wn(in)*t)+bn(in)*sin(wn(in)*t)/wn(in);
 end
 %=> visualisation de T(t) pour quelques modes
 figure(3);
