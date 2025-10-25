@@ -13,3 +13,5 @@ el=L/4;         % poistion [m]
 nmax=10;        % Nombre maximal de mode considere
 n=(1:nmax)';    % Indices modaux
 Nw=nmax;
+
+
