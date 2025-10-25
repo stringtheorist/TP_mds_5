@@ -1,6 +1,6 @@
 function [L,R,E,ro,Note,H,el,Nw,Aff]=ParamInit
 
-L=input(prompt)            % Longueur [m]
+L=input(prompt) % Longueur [m]
 R=0.001;        % Rayon [m]
 
 E=210e9;        % Module de Young [Pa]
