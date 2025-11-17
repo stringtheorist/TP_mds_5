@@ -4,7 +4,7 @@ clear;close all;clc;
 %% ========================================================================
 Typecorde = 1;
 % Chargement des parametres
-[L,H,el,Nw,Aff] = Param(TypeCorde);
+[L,H,el,Nw,Aff] = Param(Typecorde);
 % Parametres intermediaires
 [A,C,N0,Def]=ParamInter(R,L,ro,E,Note);
 % Domaine modal
