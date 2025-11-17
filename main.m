@@ -2,6 +2,7 @@
 %% INITIALISATION =========================================================
 clear;close all;clc;
 %% ========================================================================
+Typecorde = 1;
 % Chargement des parametres
 [L,R,E,ro,Note,H,el,Nw,Aff]=ParamInit;
 % Parametres intermediaires
