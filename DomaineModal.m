@@ -1,4 +1,4 @@
-function [kn,wn,Lamb,Per,Freq]=DomaineModal(Nw,L,C)
+function [kn,wn,Lamb,Per,Freq,n]=DomaineModal(Nw,L,C)
   % Domaine modal
 n=(1:Nw)';
 kn=n*pi/L;      % Nombres d'ondes [1/m] : corde fixee aux deux extremites

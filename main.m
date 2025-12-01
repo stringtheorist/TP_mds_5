@@ -2,20 +2,22 @@
 %% INITIALISATION =========================================================
 clear;close all;clc;
 %% ========================================================================
+global Typecorde;
 Typecorde = 1;
 % Chargement des parametres
 [L,H,el,Nw,R,E,ro,Note,Aff] = Param(Typecorde);
 % Parametres intermediaires
 [A,C,N0,Def]=ParamInter(R,L,ro,E,Note);
 % Domaine modal
-[kn,wn,Lamb,Per,Freq]=DomaineModal(Nw,L,C);
+[kn,wn,Lamb,Per,Freq,n]=DomaineModal(Nw,L,C);
 % Domaine spatial
 [s,Ns]=DomaineSpatial(Lamb,L);
 % Domaine temporel
 [t,Nt]=DomaineTemporel(Per,L);
-% Rq : dans une phase de bebeugage, il faut que [Nt,Ns,Nw] aient des valeurs 
+% Rq : dans une phase de bebeugage, il faut que [Nt,Ns,Nw] aient des valeurs
 % raisonnables (<=1000) et si possible distinctes.
-disp(['[Nt,Ns,Nw]=[' num2str([Nt,Ns,Nw]) ']'])
+
+%disp(['[Nt,Ns,Nw]=[' num2str([Nt,Ns,Nw]) ']'])
 
 %% ========================================================================
 %% ANALYSE MODALE =========================================================
