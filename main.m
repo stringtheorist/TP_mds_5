@@ -2,6 +2,13 @@
 %% INITIALISATION =========================================================
 clear;close all;clc;
 %% ========================================================================
+global CL;
+CL = input("Conditions aux limites (tableau de forme [0,L] ): ");
+%[0,0] : Dirichlet-Dirichlet
+%[1,1] : Neumann-Neumann
+%[0,1] Dirichlet-Neumann
+
+global CI;
 global Typecorde;
 Typecorde = 1;
 % Chargement des parametres
