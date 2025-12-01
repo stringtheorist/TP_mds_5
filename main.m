@@ -5,7 +5,7 @@ clear;close all;clc;
 global Typecorde;
 Typecorde = 1;
 % Chargement des parametres
-[L,H,el,Nw,R,E,ro,Note,Aff] = Param(Typecorde);
+[L,R,E,ro,Note,H,el,Nw,Aff] = ParamInit();
 % Parametres intermediaires
 [A,C,N0,Def]=ParamInter(R,L,ro,E,Note);
 % Domaine modal
