@@ -1,4 +1,4 @@
-function [L,H,el,Nw,Aff] = Param(TypeCorde)
+function [L,H,el,Nw,R,E,ro,Note,Aff] = Param(TypeCorde)
 %PARAM Summary of this function goes here
 %   Detailed explanation goes here
 switch TypeCorde

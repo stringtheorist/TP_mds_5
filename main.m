@@ -4,15 +4,15 @@ clear;close all;clc;
 %% ========================================================================
 Typecorde = 1;
 % Chargement des parametres
-[L,H,el,Nw,Aff] = Param(Typecorde);
+[L,H,el,Nw,R,E,ro,Note,Aff] = Param(Typecorde);
 % Parametres intermediaires
 [A,C,N0,Def]=ParamInter(R,L,ro,E,Note);
 % Domaine modal
-[n,kn,wn,Lamb,Per,Freq]=DomaineModal(Nw,L,C);
+[kn,wn,Lamb,Per,Freq]=DomaineModal(Nw,L,C);
 % Domaine spatial
-[ds,s,Ns]=DomaineSpatial(Lamb,L);
+[s,Ns]=DomaineSpatial(Lamb,L);
 % Domaine temporel
-[dt,t,Nt,tmax]=DomaineTemporel(Per,L);
+[t,Nt]=DomaineTemporel(Per,L);
 % Rq : dans une phase de bebeugage, il faut que [Nt,Ns,Nw] aient des valeurs 
 % raisonnables (<=1000) et si possible distinctes.
 disp(['[Nt,Ns,Nw]=[' num2str([Nt,Ns,Nw]) ']'])

@@ -1,5 +1,6 @@
-function [n,kn,wn,Lamb,Per,Freq]=DomaineModal(Nw,L,C)
+function [kn,wn,Lamb,Per,Freq]=DomaineModal(Nw,L,C)
   % Domaine modal
+n=(1:Nw)';
 kn=n*pi/L;      % Nombres d'ondes [1/m] : corde fixee aux deux extremites
 wn=C*kn;        % Pulsation [rad/s], relation de dispersion
 Lamb=2*pi./kn;  % Longueur d'onde de chaque mode [m]
