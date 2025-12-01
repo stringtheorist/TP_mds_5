@@ -12,4 +12,6 @@ elseif(Aff==0)
 disp('Le paramètre Aff=0 donc on n affiche pas les amplitudes modales');
 else
     disp('Problème avec la variable Aff'); 
+
 end
+
