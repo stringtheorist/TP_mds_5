@@ -10,8 +10,6 @@ CL = input("Conditions aux limites (tableau de forme [0,L] ): ");
 %[1,0] : Neumann-Dirichlet
 
 global CI;
-global Typecorde;
-Typecorde = 2;
 % Chargement des parametres
 [L,R,E,ro,Note,H,el,Nw,Aff] = ParamInit();
 % Parametres intermediaires
