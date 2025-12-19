@@ -43,5 +43,6 @@ Type=2;Illustration(Type,u,s,t)
 Type=3;Illustration(Type,u,s,t)
 % D'autres valorisations peuvent etre envisagees, quelques propostion
 % Film ?
+%Son(u,t);
 % Son ?
 % Autre ?

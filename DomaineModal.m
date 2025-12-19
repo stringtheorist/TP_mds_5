@@ -3,12 +3,11 @@ global CL
   % Domaine modal
 n=(1:Nw)';
 
-switch CL
-  case {[0,0], [1,1]}
+if(CL == [0,0] | CL == [1,1])
     kn=n*pi/L;
-  case {[0,1], [1,0]}
+elseif (CL == [1,0] | CL == [0,1])
     kn=(2*n-1)*pi/L;
-endswitch
+end
 
 wn=C*kn;        % Pulsation [rad/s], relation de dispersion
 Lamb=2*pi./kn;  % Longueur d'onde de chaque mode [m]
