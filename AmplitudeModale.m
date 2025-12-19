@@ -6,7 +6,7 @@ bn=zeros(size(n));
 %-> visualisation des amplitudes modales an
 if(Aff>0)
   figure(6);
-  stem(wn,abs(bn),'LineWidth',2)
+  stem(wn,abs(an),'LineWidth',2)
   xlabel('fn [Hz]')
   ylabel('|bn| [m]')
   set(gca,'FontSize',24)
