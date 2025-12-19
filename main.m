@@ -3,7 +3,7 @@
 clear;close all;clc;
 %% ========================================================================
 global CL;
-CL = input("Conditions aux limites (tableau de forme [0,L] ): ");
+CL = input("Conditions aux limites (cas 1 = 0 ou cas 2 = 1): ");
 %0 : Dirichlet-Dirichlet
 %1 : Neumann-Neumann
 %2 : Robins?

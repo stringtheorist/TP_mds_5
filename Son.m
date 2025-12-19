@@ -14,5 +14,6 @@ function Son(u, t)
 
     % Enregistrer dans un fichier
     audiowrite('sound.wav', tab, fs);
+
     clear tab fs;
 end
