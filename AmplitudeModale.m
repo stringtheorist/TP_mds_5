@@ -1,4 +1,4 @@
-function [an,bn]=AmplitudeModale(L,el,kn,wn,n,H,V,Aff)
+function [an,bn]=AmplitudeModale(L,el,kn,wn,n,H,Aff)
 
 an=2*H./(n*pi)*L/(L-el).*sin(kn*el)./(kn*el);
 bn=zeros(size(n));
