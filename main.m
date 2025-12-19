@@ -37,11 +37,11 @@ T=FctTemporelle(Nw,wn,an,bn,t,Aff);
 u=FctDeplacement(Y,T);
 
 %% ========================================================================
-%% VALORISATION ==========================================================
+%% VALORISATION ===========================================================
 Type=1;Illustration(Type,u,s,t);
 Type=2;Illustration(Type,u,s,t);
+Film(u,s,L,H);
 Son(u,t);
-Type=3;Illustration(Type,u,s,t);
 % D'autres valorisations peuvent etre envisagees, quelques propostion
 % Film ?
 % Autre ?
