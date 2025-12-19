@@ -7,7 +7,7 @@ function [L,R,E,ro,Note,H,el,Nw,Aff]=ParamInit()
     E=210e9;        % Module de Young [Pa]
     ro=7800;        % Masse volumique [kg/m^3]
 
-    Note=440;       % Frequence fondamentale [Hz]
+    Note=442;       % Frequence fondamentale [Hz]
     H=L/4;          % Hauteur [m]
     el=L/5;         % postion [m]
 

@@ -4,10 +4,10 @@ clear;close all;clc;
 %% ========================================================================
 global CL;
 CL = input("Conditions aux limites (tableau de forme [0,L] ): ");
-%[0,0] : Dirichlet-Dirichlet
-%[1,1] : Neumann-Neumann
-%[0,1] : Dirichlet-Neumann
-%[1,0] : Neumann-Dirichlet
+%0 : Dirichlet-Dirichlet
+%1 : Neumann-Neumann
+%2 : Robins?
+
 
 global CI;
 % Chargement des parametres
@@ -23,7 +23,7 @@ global CI;
 % Rq : dans une phase de bebeugage, il faut que [Nt,Ns,Nw] aient des valeurs
 % raisonnables (<=1000) et si possible distinctes.
 
-disp(['[Nt,Ns,Nw]=[' num2str([Nt,Ns,Nw]) ']'])
+%disp(['[Nt,Ns,Nw]=[' num2str([Nt,Ns,Nw]) ']'])
 
 %% ========================================================================
 %% ANALYSE MODALE =========================================================
@@ -38,11 +38,10 @@ u=FctDeplacement(Y,T);
 
 %% ========================================================================
 %% VALORISATION ==========================================================
-Type=1;Illustration(Type,u,s,t)
-Type=2;Illustration(Type,u,s,t)
-Type=3;Illustration(Type,u,s,t)
+Type=1;Illustration(Type,u,s,t);
+Type=2;Illustration(Type,u,s,t);
+Son(u,t);
+Type=3;Illustration(Type,u,s,t);
 % D'autres valorisations peuvent etre envisagees, quelques propostion
 % Film ?
-%Son(u,t);
-% Son ?
 % Autre ?

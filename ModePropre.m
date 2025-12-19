@@ -1,19 +1,19 @@
 function Y=ModePropre(kn,s,Nw,Aff)
   global CL;
 
-  
-  if(CL == [0,0] | CL == [0,1])
+
+  if(CL == 0)
     for in=1:Nw
-        % Y_ij, avec i=>n et j=>s
         Y(in,:)=sin(kn(in)*s);
       end
-  elseif (CL == [1,0] | CL == [1,1])
-    Y(1,:)=cos(0*s);
+
+   elseif(CL == 1)
+     %Y(1,:)=cos(0*s);
       for in=1:Nw
-        % Y_ij, avec i=>n et j=>s
         Y(in,:)=cos(kn(in)*s);
       end
-    end
+
+   end
 
 %=> visualisation de quelques modes propres
 figure(1);
