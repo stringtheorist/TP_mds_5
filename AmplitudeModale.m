@@ -1,4 +1,4 @@
-function [an,bn]=AmplitudeModale(L,el,kn,wn,n,H,Aff)
+function [an,bn]=AmplitudeModale(L,el,kn,wn,n,H,V,Aff)
 
 global Typecorde;
 switch Typecorde

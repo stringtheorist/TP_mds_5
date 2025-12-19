@@ -7,14 +7,15 @@ CL = input("Conditions aux limites (tableau de forme [0,L] ): ");
 %[0,0] : Dirichlet-Dirichlet
 %[1,1] : Neumann-Neumann
 %[0,1] : Dirichlet-Neumann
+%[1,0] : Neumann-Dirichlet
 
 global CI;
 global Typecorde;
-Typecorde = 1;
+Typecorde = 2;
 % Chargement des parametres
 [L,R,E,ro,Note,H,el,Nw,Aff] = ParamInit();
 % Parametres intermediaires
-[A,C,N0,Def]=ParamInter(R,L,ro,E,Note);
+[A,C,N0,Def,V]=ParamInter(R,L,ro,E,Note);
 % Domaine modal
 [kn,wn,Lamb,Per,Freq,n]=DomaineModal(Nw,L,C);
 % Domaine spatial
@@ -24,14 +25,14 @@ Typecorde = 1;
 % Rq : dans une phase de bebeugage, il faut que [Nt,Ns,Nw] aient des valeurs
 % raisonnables (<=1000) et si possible distinctes.
 
-%disp(['[Nt,Ns,Nw]=[' num2str([Nt,Ns,Nw]) ']'])
+disp(['[Nt,Ns,Nw]=[' num2str([Nt,Ns,Nw]) ']'])
 
 %% ========================================================================
 %% ANALYSE MODALE =========================================================
 % Modes propres
 Y=ModePropre(kn,s,Nw,Aff);
 % Amplitude modale
-[an,bn]=AmplitudeModale(L,el,kn,wn,n,H,Aff);
+[an,bn]=AmplitudeModale(L,el,kn,wn,n,H,V,Aff);
 % Fonction en temps
 T=FctTemporelle(Nw,wn,an,bn,t,Aff);
 % Deplacement
