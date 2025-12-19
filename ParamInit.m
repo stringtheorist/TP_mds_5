@@ -1,8 +1,5 @@
 function [L,R,E,ro,Note,H,el,Nw,Aff]=ParamInit()
 
-global Typecorde;
-switch Typecorde
-  case 2
     %L=input(prompt) % Longueur [m]
     L = 100;
     R=0.001;        % Rayon [m]
@@ -19,4 +16,4 @@ switch Typecorde
     Nw=nmax;
 
     Aff=1;          % Variable de type d'affichage [0,1,2,3];
-end
+
