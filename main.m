@@ -38,10 +38,11 @@ u=FctDeplacement(Y,T);
 
 %% ========================================================================
 %% VALORISATION ===========================================================
+Son(u,t);
 Type=1;Illustration(Type,u,s,t);
 Type=2;Illustration(Type,u,s,t);
 Film(u,s,L,H);
-Son(u,t);
+
 % D'autres valorisations peuvent etre envisagees, quelques propostion
 % Film ?
 % Autre ?
